@@ -1,0 +1,36 @@
+#{extends 'main.html' /}
+
+<table class="ui celled table middle aligned">
+    <thead>
+    <tr>
+        <th>Date</th>
+        <th>Weight</th>
+        <th>Chest</th>
+        <th>Thigh</th>
+        <th>Upper Arm</th>
+        <th>Waist</th>
+        <th>Hips</th>
+        <th>Trend</th>
+        <th>Comment</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    #{list items:_assessments, as:'assessment'}
+    <tr>
+        <td>n/a</td>
+        <td> ${assessment.weight} </td>
+        <td> ${assessment.chest} </td>
+        <td> ${assessment.thigh} </td>
+        <td> ${assessment.upperArm} </td>
+        <td> ${assessment.waist} </td>
+        <td> ${assessment.hips} </td>
+        <td></td>
+        <td></td>
+        <td>
+            <a href="/dashboard/deleteAssessment/${assessment.id}/"><i class="trash alternate icon"></i></a>
+        </td>
+    </tr>
+    #{/list}
+    </tbody>
+</table>

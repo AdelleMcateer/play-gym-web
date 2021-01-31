@@ -1,0 +1,60 @@
+Assessment(a1):
+  weight: 144.0
+  chest: 45.0
+  thigh: 35.5
+  upperArm: 23.3
+  waist: 36.0
+  hips: 38.0
+
+Assessment(a2):
+  weight: 123.0
+  chest: 45.0
+  thigh: 12.0
+  upperArm: 23.3
+  waist: 31.0
+  hips: 36.0
+
+Assessment(a3):
+  weight: 65.0
+  chest: 21.0
+  thigh: 19.0
+  upperArm: 16.3
+  waist: 28.0
+  hips: 30.0
+
+Member(m1):
+  firstname: Homer
+  lastname: Simpson
+  email: homer@simpson.com
+  password: secret
+  address: Springfield
+  gender: Male
+  height: 1.65
+  startingWeight: 55
+  assessments:
+    - a1
+    - a2
+
+Member(m2):
+  firstname: Bart
+  lastname: Simpson
+  email: bart@simpson.com
+  password: secret
+  address: Springfield
+  gender: Male
+  height: 1.1
+  startingWeight: 35
+  assessments:
+    - a3
+
+Trainer(t1):
+  firstname: marge
+  lastname: simpson
+  email: marge@simpson.com
+  password: secret
+  address: Springfield
+  members:
+    - m1
+    - m2
+
+

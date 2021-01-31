@@ -1,0 +1,12 @@
+#{extends 'main.html' /}
+#{set title:'Assessment' /}
+
+#{menu id:"dashboard"/}
+
+<section class="ui segment">
+    <h2 class="ui header">
+    ${assessmet}
+    </h2>
+#{listassessment assessment:assessment /}
+#{addassessment assessment:assessment /}
+</section>

@@ -1,0 +1,57 @@
+#{extends 'main.html' /}
+#{trainermenu /}
+
+<section class="ui raised segment">
+    <div class="ui raised center aligned segment">
+        <div class="ui four statistics">
+            <div class="statistic">
+                <div class="value">
+                    <i class="user icon"></i>
+                </div>
+                <div class="label">
+
+                </div>
+            </div>
+            <div class="statistic">
+                <div class="value">
+                    <i class="${member} dashboard icon"></i>
+                </div>
+                <div class="label">
+                    IDEAL WEIGHT INDICATOR
+                </div>
+            </div>
+            <div class="statistic">
+                <div class="value">
+                    <i class="heartbeat icon"></i>${BMI}
+                </div>
+                <div class="label">
+                    BMI
+                </div>
+            </div>
+            <div class="statistic">
+                <div class="value">
+                    <i class="doctor icon"></i>
+                </div>
+                <div class="label">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ui segment">
+#{listassessment assessments:assessments,
+member:member/}
+</section>
+
+
+
+
+
+
+
+
+
+
+
+

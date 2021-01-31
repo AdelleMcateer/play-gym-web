@@ -1,0 +1,59 @@
+#{extends 'main.html' /}
+#{set title:'Dashboard' /}
+#{menu id:"dashboard"/}
+
+<section class="ui raised segment">
+    <div class="ui raised center aligned segment">
+        <div class="ui four statistics">
+            <div class="statistic">
+                <div class="value">
+                    <i class="user icon"></i>
+                </div>
+                <div class="label">
+                ${member.firstname} ${member.lastname}
+                </div>
+            </div>
+            <div class="statistic">
+                <div class="value">
+                    <i class="${member} dashboard icon"></i>
+                </div>
+                <div class="label">
+                    IDEAL WEIGHT INDICATOR
+                </div>
+            </div>
+            <div class="statistic">
+                <div class="value">
+                    <i class="heartbeat icon"></i>${member.memberBMI()}
+                </div>
+                <div class="label">
+                    BMI
+                </div>
+            </div>
+            <div class="statistic">
+                <div class="value">
+                    <i class="doctor icon"></i>
+                    <h4>${member.determineBMICategory()}</h4>
+                </div>
+                <div class="label">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+#{list items:assessments, as: 'assessment'}
+#{/list}
+
+<section>#{addassessment /}
+</section>
+
+<section class="ui raised segment">
+    <table class="ui celled table middle aligned">
+        <h2 class="ui header">
+            Assessments
+        </h2>
+    #{listassessment assessments:assessments/}
+    </table>
+</section>
+
+
